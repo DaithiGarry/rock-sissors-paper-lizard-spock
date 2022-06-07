@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css"
+    <script src="https://kit.fontawesome.com/1c857a855c.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,6 +15,35 @@
 
     
     <div class="game-area">
+        <div class="control.area">
+            <button class="btn btn--big btn--purple">
+                <i class="fa-solid fa-hand-back-fist"></i>
+                Rock</button>
+
+            <button class="btn btn--big btn--blue">
+                <i class="fa-solid fa-hand"></i>
+                Paper</button>
+
+            <button class="btn btn--big btn--green">
+                <i class="fa-solid fa-hand-scissors"></i>
+                Scissors</button>
+
+            <button class="btn btn--big btn--yellow">
+                <i class="fa-solid fa-hand-lizard"></i>
+                Lizard</button>
+
+            <button class="btn btn--big btn--orange">
+                <i class="fa-solid fa-hand-spock"></i>
+                Spock</button>
+        </div>
+        <div class="question-area">
+            <span id="operand1">0</span>
+            <span>VS</span>
+            <span id="operand2">?</span>
+            <p class="answer-message">Make a Move Punk:</p>
+            <input id="answer-box" type="click">
+        </div>
+        <button class="btn btn-grey">Lets Rock!</button>
 
     </div>
 
@@ -24,5 +54,6 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
