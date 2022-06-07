@@ -2,7 +2,7 @@
 
 body {
     background-color: white;
-    font-family: "Raleway", sans-serif;
+    font-family: sans-serif;
     color: #445361;
     text-align: center;
 }
@@ -27,7 +27,7 @@ body {
     width: 85%;
     height: 65vh;
     max-height: 450px;
-    max-width: 830px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
@@ -55,7 +55,7 @@ body {
     margin: 30px auto;
 }
 
-#score {
+#correct {
     color: green;
     font-weight: bold;
 }
@@ -89,7 +89,7 @@ body {
 .btn {
     width: 220px;
     height: 60px;
-    font-family: "Raleway", sans-serif;
+    font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: white;
@@ -116,7 +116,7 @@ body {
     font-size: 1rem;
     color: #445361;
     position: relative;
-    left: -0.5em;
+    left: -0.25em;
 }
 
 .btn--blue {
@@ -141,14 +141,14 @@ body {
     color: white;
 }
 
-.btn--red {
-    border-color: red;
-    color: red;
+.btn--purple {
+    border-color: purple;
+    color: purple;
 }
 
-.btn--red:active,
-.btn--red:hover {
-    background-color: darkred;
+.btn--purple:active,
+.btn--purple:hover {
+    background-color: darkmagenta;
     color: white;
 }
 
@@ -163,11 +163,23 @@ body {
     color: white;
 }
 
+.btn--red {
+    border-color: red;
+    color: red;
+}
+
+.btn--red:active,
+.btn--red:hover {
+    background-color: darkred;
+    color: white;
+}
+
 .btn--gray {
     margin-top: 25px;
-    background-color: #445361;
+    background-color: darkgrey;
     border: 1px transparent;
     border-radius: 20px;
+    
 }
 
 .btn--gray:active,

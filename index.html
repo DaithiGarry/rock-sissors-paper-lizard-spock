@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"
+    
     <script src="https://kit.fontawesome.com/1c857a855c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">    
     <title>Document</title>
 </head>
 <body>
@@ -16,25 +18,25 @@
     
     <div class="game-area">
         <div class="control.area">
-            <button class="btn btn--big btn--purple">
+            <button data-type="Rock" class="btn btn--big btn--purple">
                 <i class="fa-solid fa-hand-back-fist"></i>
-                Rock</button>
+            </button>
 
-            <button class="btn btn--big btn--blue">
+            <button data-type="Paper" class="btn btn--big btn--blue">
                 <i class="fa-solid fa-hand"></i>
-                Paper</button>
+            </button>
 
-            <button class="btn btn--big btn--green">
+            <button data-type="Scissors" class="btn btn--big btn--green">
                 <i class="fa-solid fa-hand-scissors"></i>
-                Scissors</button>
+            </button>
 
-            <button class="btn btn--big btn--yellow">
+            <button data-type="Lizard" class="btn btn--big btn--orange">
                 <i class="fa-solid fa-hand-lizard"></i>
-                Lizard</button>
+            </button>
 
-            <button class="btn btn--big btn--orange">
+            <button data-type="Spock" class="btn btn--big btn--red">
                 <i class="fa-solid fa-hand-spock"></i>
-                Spock</button>
+            </button>
         </div>
         <div class="question-area">
             <span id="operand1">0</span>
@@ -43,7 +45,7 @@
             <p class="answer-message">Make a Move Punk:</p>
             <input id="answer-box" type="click">
         </div>
-        <button class="btn btn-grey">Lets Rock!</button>
+        <button class="btn btn--gray">Lets Rock!</button>
 
     </div>
 
