@@ -12,12 +12,9 @@ body {
 .heading {
     text-align: center;
     font-size: 2.5rem;
+    max-height: 2%;
 }
 
-.logo {
-    height: 40px;
-    padding-right: 5px;
-}
 
 /* --------- Game layout */
 
@@ -25,8 +22,7 @@ body {
     background-color: #E6ECF0;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
-    max-height: 450px;
+    max-height: 550px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;

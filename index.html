@@ -8,44 +8,43 @@
     <script src="https://kit.fontawesome.com/1c857a855c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/style.css">    
-    <title>Document</title>
+    <title>RPSLS</title>
 </head>
 <body>
     <h1 class="heading">
-        <img class="main-logo" src="assets/images/main-logo.png"> Rock, Paper, Scissors, Lizard, Spock
+        Rock, Paper, Scissors, Lizard, Spock
     </h1>
 
     
     <div class="game-area">
         <div class="control.area">
-            <button data-type="Rock" class="btn btn--big btn--purple">
+            <button id='rock' class="btn btn--big btn--purple">
                 <i class="fa-solid fa-hand-back-fist"></i>
             </button>
 
-            <button data-type="Paper" class="btn btn--big btn--blue">
+            <button id='paper' class="btn btn--big btn--blue">
                 <i class="fa-solid fa-hand"></i>
             </button>
 
-            <button data-type="Scissors" class="btn btn--big btn--green">
+            <button id='scissors' class="btn btn--big btn--green">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
 
-            <button data-type="Lizard" class="btn btn--big btn--orange">
+            <button id='lizard' class="btn btn--big btn--orange">
                 <i class="fa-solid fa-hand-lizard"></i>
             </button>
 
-            <button data-type="Spock" class="btn btn--big btn--red">
+            <button id='spock' class="btn btn--big btn--red">
                 <i class="fa-solid fa-hand-spock"></i>
             </button>
         </div>
         <div class="question-area">
-            <span id="operand1">0</span>
+            <h3>Your choice: <span id='user-choice'></span></h3>
             <span>VS</span>
-            <span id="operand2">?</span>
-            <p class="answer-message">Make a Move Punk:</p>
-            <input id="answer-box" type="click">
+            <h3>Computer choice: <span id='computer-choice'></span></h3>
+            <h3>Result: <span id='result'></span></h3>
         </div>
-        <button class="btn btn--gray">Lets Rock!</button>
+        
 
     </div>
 
