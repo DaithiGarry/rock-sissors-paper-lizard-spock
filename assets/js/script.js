@@ -1,6 +1,20 @@
 //Game will wait for DOM to full load before starting
 //Get button elements and add event listeners for player input
-
+document.addEventListener("DOMContentLoaded", function() {
+  let buttons = document.getElementsByTagName("button");
+  
+  for (let button of buttons) {
+    button.addEventListener('click', function() {
+        if (this.getElementById() === 'submit') {
+          alert('You clicked submit!');
+        } else {
+          let gametype = this.getElementById();
+          alert(`You clicked ${gametype}`);
+      
+      }
+    })
+  }
+})
 
 const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
@@ -124,8 +138,33 @@ function getResult() {
       incrementcorrect();
     }
   resultDisplay.innerHTML = result
-  increment
- }
+  
+}
+
+function incrementcorrect() {
+  let oldscore = parseInt(document.getElementById('correct').innerText);
+  document.getElementById('correct').innerText = ++oldscore;
+  if (oldscore > 5) {
+    alert('Game Over you win!'); 
+}
+}
+function incrementincorrect() {
+  let oldscore = parseInt(document.getElementById('incorrect').innerText);
+  document.getElementById('incorrect').innerText = ++oldscore;
+  if  (oldscore >5) {
+    alert('Game Over you lose'); 
+  }
+}
+
+
+/*function getEndGame() {
+  if (oldscore > 5) {
+    alert('Game Over you win!');
+  }
+  if  (oldscore >5) {
+    alert('Game Over you lose'); 
+  }
+}
 
 //creats a random competitor (rock, paper, scissors, lizard or spock) to play against
 /*function generateComputerChoice() {
@@ -171,14 +210,5 @@ function getResult() {
     }
 }*/
 
-function incrementcorrect() {
-    let oldscore = parseInt(document.getElementById('correct').innerText);
-    document.getElementById('correct').innerText = ++oldscore
-}
-
-function incrementincorrect() {
-    let oldscore = parseInt(document.getElementById('incorrect').innerText);
-    document.getElementById('incorrect').innerText = ++oldscore
-}
 
 
