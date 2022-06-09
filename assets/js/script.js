@@ -144,14 +144,14 @@ function getResult() {
 function incrementcorrect() {
   let oldscore = parseInt(document.getElementById('correct').innerText);
   document.getElementById('correct').innerText = ++oldscore;
-  if (oldscore > 5) {
+  if (oldscore > 4) {
     alert('Game Over you win!'); 
 }
 }
 function incrementincorrect() {
   let oldscore = parseInt(document.getElementById('incorrect').innerText);
   document.getElementById('incorrect').innerText = ++oldscore;
-  if  (oldscore >5) {
+  if  (oldscore >4) {
     alert('Game Over you lose'); 
   }
 }
