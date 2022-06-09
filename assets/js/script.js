@@ -20,9 +20,11 @@ const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
 const possibleChoices = document.querySelectorAll('button');
+const resetGameButton = document.getElementsByClassName('reset');
 let userChoice;
 let computerChoice;
 let result;
+
 
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -137,8 +139,7 @@ function getResult() {
       result = 'you win!'
       incrementcorrect();
     }
-  resultDisplay.innerHTML = result
-  
+  resultDisplay.innerHTML = result;
 }
 
 function incrementcorrect() {
@@ -155,6 +156,14 @@ function incrementincorrect() {
     alert('Game Over you lose'); 
   }
 }
+
+
+  resetGameButton.addEventListener('click', resetGame);
+  
+  function resetGame() {
+  oldscore = 0;
+  }
+
 
 
 /*function getEndGame() {

@@ -16,16 +16,36 @@ body {
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+    position: absolute;
+    top: 15px;
+    left: 400px;
+    height: 60px;
+    width: 85px;
+    padding: 8px 10px;
+    
 }
 
 .reset {
-    right: 20px;
+    position: absolute;
     top: 20px;
-    padding: 5px;
+    right: 420px;
+    font-size: 35px;
+    background-color: #445361;
+    color: #E6ECF0;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
 
 }
+
+.reset:hover {
+    background-color: #E6ECF0;
+    color:#445361;
+}
+
+
 
 /* --------- Game layout */
 
@@ -54,7 +74,7 @@ body {
 .score-area {
     margin: 5px auto;
     width: 60%;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .controls-area {
