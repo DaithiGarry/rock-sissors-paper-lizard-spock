@@ -1,6 +1,6 @@
 //Game will wait for DOM to full load before starting
 //Get button elements and add event listeners for player input
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
   let buttons = document.getElementsByTagName("button");
   
   for (let button of buttons) {
@@ -14,18 +14,26 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
   }
-})
+})*/
 
 const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
-const possibleChoices = document.querySelectorAll('button');
-const resetGameButton = document.getElementsByClassName('reset');
+const possibleChoices = document.getElementById('control.area').querySelectorAll('button');
+const resetGameButton = document.getElementById('reset');
+let correctScoreElement = document.getElementById('correct');
+let incorrectScoreElement = document.getElementById('incorrect');
 let userChoice;
 let computerChoice;
 let result;
 
 
+
+
+//function to generate user choices and start the game.
+document.getElementById('user-choice').value = '';
+document.getElementById('computer-choice').value = '';
+document.getElementById('result').value = '';
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id;
@@ -34,6 +42,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     getResult();
 }))
 
+//function to generate computer choices during the game. Computer choices are generate automatically on the click of the users choice.
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 5) + 1;
     
@@ -54,7 +63,7 @@ function generateComputerChoice() {
       }
     computerChoiceDisplay.innerHTML = computerChoice
   }
- 
+//function to get the result of the contest between the user and the computer.
 function getResult() {
   if (computerChoice === userChoice) {
     result = 'its a draw!'
@@ -141,14 +150,15 @@ function getResult() {
     }
   resultDisplay.innerHTML = result;
 }
-
+//function to increase the users score for each win over the computer.
 function incrementcorrect() {
   let oldscore = parseInt(document.getElementById('correct').innerText);
   document.getElementById('correct').innerText = ++oldscore;
   if (oldscore > 4) {
     alert('Game Over you win!'); 
+  }
 }
-}
+//function to increase the computers score for each win over the computer.
 function incrementincorrect() {
   let oldscore = parseInt(document.getElementById('incorrect').innerText);
   document.getElementById('incorrect').innerText = ++oldscore;
@@ -157,13 +167,15 @@ function incrementincorrect() {
   }
 }
 
-
-  resetGameButton.addEventListener('click', resetGame);
+//function to reset game after the user or computer has accured 5 wins to end the game.
+resetGameButton.addEventListener("click", function() {
+  correctScoreElement.innerHTML = 0;
+  incorrectScoreElement.innerHTML= 0;
+  computerChoiceDisplay.innerHTML = '';
+  resultDisplay.innerHTML = '';
+  userChoiceDisplay.innerHTML= '';
+})
   
-  function resetGame() {
-  oldscore = 0;
-  }
-
 
 
 /*function getEndGame() {
