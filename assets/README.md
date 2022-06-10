@@ -51,6 +51,7 @@ This game is targetted at adult and children; in addition to, fans of the Big Ba
   - On occasion, the game will drop, skip or miss the user selection.
 - The score board functions correctly.
 - The game will conclude correctly when five wins or loses are achieved.
+- The game reset button works correctly.
 - The colors (dark yellow for Lizard) has been registered as an issue on the lighthouse test.
 - Also, the color coded method (explanation same color as the icons) is reducing the accessibility score on the lighthouse test. Each icon need to be directly labelled.
 
