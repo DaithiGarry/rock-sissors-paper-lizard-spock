@@ -69,7 +69,17 @@ This game is targetted at adult and children; in addition to, fans of the Big Ba
 ![DOMContentLoaded event listener](/assets/images/DOMContentLoaded.png)
 
 ## Validator testing
-- HTML
+- NuHTML checker showed that a stray footer was found on line 72 of the HTML file. However, this is the only footer in the document.
+
+![stray footer found in HTML](/assets/images/stray_footer_tag.png)
+
+- W3C CSS validation service showed that no errors were found in the CSS.
+
+![no erros in css](/assets/images/css_validator.png)
+
+- jshint.com service showed 17 warnings in the javascript file.
+
+![jshint warnings](/assets/images/javascript%20warnings.png)
 
 ## Deployment
 - The site was deployed to Github pages.
