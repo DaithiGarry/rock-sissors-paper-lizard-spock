@@ -73,6 +73,7 @@ This game is targetted at adult and children; in addition to, fans of the Big Ba
 
 ## Deployment
 - The site was deployed to Github pages.
+- The live link can be found at [github](https://daithigarry.github.io/rock-sissors-paper-lizard-spock/)
 
 ## Content
 - The site was styled on the Love Maths project.
