@@ -1,21 +1,3 @@
-//Game will wait for DOM to full load before starting
-//Get button elements and add event listeners for player input
-/*document.addEventListener("DOMContentLoaded", function() {
-  let buttons = document.getElementsByTagName("button");
-  
-  for (let button of buttons) {
-    button.addEventListener('click', function() {
-        if (this.getElementById() === 'submit') {
-          alert('You clicked submit!');
-        } else {
-          let gametype = this.getElementById();
-          alert(`You clicked ${gametype}`);
-      
-      }
-    })
-  }
-})*/
-
 const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
@@ -27,8 +9,10 @@ let userChoice;
 let computerChoice;
 let result;
 
-
-
+//Game will wait for DOM to full load before starting
+//Get button elements and add event listeners for player input
+document.addEventListener('DOMContentLoaded', function(){
+  
 
 //function to generate user choices and start the game.
 document.getElementById('user-choice').value = '';
@@ -41,6 +25,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     generateComputerChoice();
     getResult();
 }))
+});
 
 //function to generate computer choices during the game. Computer choices are generate automatically on the click of the users choice.
 function generateComputerChoice() {
@@ -62,7 +47,7 @@ function generateComputerChoice() {
       computerChoice = 'spock'
       }
     computerChoiceDisplay.innerHTML = computerChoice
-  }
+  };
 //function to get the result of the contest between the user and the computer.
 function getResult() {
   if (computerChoice === userChoice) {
@@ -158,7 +143,7 @@ function incrementcorrect() {
     alert('Game Over you win!'); 
   }
 }
-//function to increase the computers score for each win over the computer.
+//function to increase the computers score for each win over the user.
 function incrementincorrect() {
   let oldscore = parseInt(document.getElementById('incorrect').innerText);
   document.getElementById('incorrect').innerText = ++oldscore;
@@ -176,60 +161,5 @@ resetGameButton.addEventListener("click", function() {
   userChoiceDisplay.innerHTML= '';
 })
   
-
-
-/*function getEndGame() {
-  if (oldscore > 5) {
-    alert('Game Over you win!');
-  }
-  if  (oldscore >5) {
-    alert('Game Over you lose'); 
-  }
-}
-
-//creats a random competitor (rock, paper, scissors, lizard or spock) to play against
-/*function generateComputerChoice() {
-    computerChoice = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
-    computerChoiceDisplay.innerHTML= computerChoice;
-    
-}
-*/
-//rules of the game
-/*const getResult = () => {
-    switch (userChoice + computerChoice) {
-      case 'scissorspaper':
-      case 'paperrock':
-      case 'rocklizard':
-      case 'lizardspock':
-      case 'spockscissors':
-      case 'scissorlizard':
-      case 'lizardpaper':
-      case 'paperspock':
-      case 'spockrock':
-      case 'rockscissors':    
-        resultDisplay.innerHTML = "YOU WIN!"
-        break
-      case 'paperscissors':
-      case 'rockpaper':
-      case 'lizardrock':
-      case 'spocklizard':
-      case 'scissorsspock':
-      case 'lizardscissor':
-      case 'paperlizard':
-      case 'spockpaper':
-      case 'rockspock':
-      case 'scissorsrock':
-        resultDisplay.innerHTML = "YOU LOSE!"
-        break
-      case 'paperpaper':
-      case 'scissorsscissors':
-      case 'rockrock':
-      case 'lizardlizard':
-      case 'spockspock':
-        resultDisplay.innerHTML = "ITS A DRAW!"
-        break
-    }
-}*/
-
 
 

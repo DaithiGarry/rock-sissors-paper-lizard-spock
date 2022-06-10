@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1 class="heading">
-        <img class= "logo" src="assets/images/main-logo.jpg" alt="logo"> Rock, Paper, Scissors, Lizard, Spock
+        <img class= "logo" src="assets/images/main-logo.png" alt="logo"> Rock, Paper, Scissors, Lizard, Spock
         <button id='reset'>
             <i class="fa-solid fa-arrows-rotate"></i>
         </button>
@@ -42,11 +42,14 @@
             <button id='spock' class="btn btn--big btn--red">
                 <i class="fa-solid fa-hand-spock"></i>
             </button>
-            
+            <h3>Take your pick from:</h3> 
+            <h3><span id="purple">Rock</span>, <span id="blue">Paper</span>,
+                <span id="green">Scissors</span>, <span id="orange">Lizard</span>, <span id="red">Spock</span>.</h3>
+            <h3>First to 5 wins the game!</h3>
 
 
         </div>
-        <div class="question-area">
+        <div class="choice-area">
             <h3>Your choice: <span id='user-choice'></span></h3>
             <span>VS</span>
             <h3>Computer choice: <span id='computer-choice'></span></h3>
@@ -66,4 +69,13 @@
     <script src="assets/js/script.js"></script>
     
 </body>
+<footer>
+    <h3>Rules of the Game:</h3>
+    <p>"Scissors cuts paper, paper covers rock,
+         rock crushes lizard, lizard poisons Spock, 
+         Spock smashes scissors, scissors decapitates 
+         lizard, lizard eats paper, paper disproves Spock, 
+         Spock vaporizes rock, and as it always has, 
+         rock crushes scissors."</p>
+</footer>
 </html>

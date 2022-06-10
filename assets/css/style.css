@@ -1,34 +1,48 @@
-/* --------- Global style */
+/* --------- Global style, altered from Love Maths project */
 
 body {
-    background-color: white;
+    background-color: #E6ECF0;
     font-family: sans-serif;
-    color: #445361;
+    color: #292a2b;
     text-align: center;
 }
 
-/* --------- Heading */
+/* --------- Heading, altered from Love Maths project */
 
 .heading {
     text-align: center;
     font-size: 2.5rem;
     max-height: 2%;
+    
+}
+/*----------Footer, created for this project */
+footer {
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-top: 0;
+    text-align: center;
+    color:#E6ECF0;
+    background-color: #292a2b;
 }
 
+/*----------Logo, created for this project */
 .logo {
     position: absolute;
     top: 15px;
-    left: 400px;
+    left: 315px;
     height: 60px;
     width: 85px;
     padding: 8px 10px;
     
 }
-
+/*----------Reset button, created for this project */
 #reset {
     position: absolute;
     top: 20px;
-    right: 420px;
+    right: 350px;
     font-size: 35px;
     background-color: #445361;
     color: #E6ECF0;
@@ -41,45 +55,65 @@ body {
 }
 
 #reset:hover {
-    background-color: #E6ECF0;
-    color:#445361;
+    background-color: #b3b9bd;
+    color:#474e53;
+}
+/*----------colors for directions under heading-----*/
+#purple {
+    color: purple;
 }
 
+#blue {
+    color: blue;
+}
 
+#green {
+    color: green;
+}
 
-/* --------- Game layout */
+#orange {
+    color: darkgoldenrod;
+}
+
+#red {
+    color: red;
+}
+/* --------- Game layout, altered from Love Maths project */
 
 .game-area {
-    background-color: #E6ECF0;
+    background-color: #f9f9fa;
     box-sizing: border-box;
     width: 85%;
-    max-height: 550px;
+    max-height: 650px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
 }
 
-.question-area {
-    width: 50%;
-    font-size: 2rem;
-    margin: auto;
-    padding: 50px 0;
+.control-area {
+    width: 85%;
+    margin: 30px auto;
 }
 
-.question-area span {
+/*-----------Choice-area, created for this project*/
+.choice-area {
+    width: 50%;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 10px 0;
+}
+
+
+.choice-area span {
     padding: 0 15px;
 }
 
-.score-area {
+/*----------score-board, created for this project but similiar in construction to love maths project*/
+.score-board {
     margin: 5px auto;
     width: 60%;
     font-size: 2rem;
-}
-
-.controls-area {
-    width: 85%;
-    margin: 30px auto;
 }
 
 #correct {
@@ -92,14 +126,18 @@ body {
     font-weight: bold;
 }
 
+p.scores {
+         padding: 0 5px;
+         margin-top: 0;
+}
 
-
+/*----------scores disply alteration, created for this project.*/
 .scores {
     display: inline-block;
     padding: 25px;
 }
 
-/* --------- Buttons */
+/* --------- Buttons, altered from the Love Maths project */
 
 .btn {
     width: 220px;
@@ -189,18 +227,6 @@ body {
     color: white;
 }
 
-.btn--gray {
-    margin-top: 25px;
-    background-color: darkgrey;
-    border: 1px transparent;
-    border-radius: 20px;
-    
-}
-
-.btn--gray:active,
-.btn--gray:hover {
-    background-color: #0d1013;
-}
 
 /* --------- Media queries */
 
@@ -225,19 +251,21 @@ body {
         left: -0.7rem;
     }
 
-    .question-area {
+    .choice-area {
         padding: 10% 0;
         width: 100%;
     }
 
-    .question-area span {
+    .choice-area span {
         padding: 0;
     }
 
-    .answer-message {
-        display: block;
+    .score-board h3 {
+        margin-bottom: 0;
+       
     }
-    .score-area {
+    
+    .score-board {
         width: 100%;    
     }
 
@@ -266,7 +294,7 @@ body {
     .heading {
         text-align:center;
         font-size: 1.5rem;
-        width: 85%;
+        width: 65%;
         max-height: 200px;
         margin-left: auto;
         margin-right: auto;
@@ -277,10 +305,26 @@ body {
         max-height: 675px;
         
     }
+    .control.area h3 {
+        font-size: 1.0rem; 
+    }
+    #control.area h3 {
+        font-size: 1.0rem; 
+    }
+    .choice-area h3 {
+        font-size: 1.2rem;
+    }
+    .score-board h3 {
+        font-size: 1.2rem;
+    }
+
+    .score-board p {
+        font-size: 1.2rem;
+    }
 }
 
-@media (max-width: 320px) {
-    .controls-area {
+@media (max-width: 360px) {
+    .control-area {
         width: 100%;
     }
 
@@ -288,9 +332,9 @@ body {
         margin: 0 10px;
         padding: 5px;
         border: 5px solid;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+        width: 60px;
+        height: 60px;
+        font-size: 2.0rem;
         display: inline;
         
     }
@@ -300,27 +344,27 @@ body {
         left: -0.7rem;
     }
 
-    .question-area {
-        padding: 10% 0;
+    .choice-area {
+        padding: 2% 0;
         width: 100%;
+        height: 400px;
     }
 
-    .question-area span {
+    .choice-area span {
         padding: 0;
     }
 
-    .answer-message {
-        display: block;
-    }
-
-
-    .score-area {
+    .score-board {
         width: 100%;
+        
+    }
+    .score-board h3 {
+        margin-bottom: 0;
         
     }
 
     .scores {
-        margin: 0.5em auto;
+        margin: 0.1em 0;
         display: inline-block;
         padding: 5px;
     }
@@ -336,11 +380,48 @@ body {
         position: absolute;
         top: 15px;
         left: -8px;
+        height: 50px;
+        width: 55px;
+         
+    }
+    
+    .heading {
+        max-width: 65%;
+    }
+    .game-area {
+        max-height: 480px;
+        
+    }
+
+    #control.area h3 {
+        font-size: 1.0rem; 
+    }
+    .choice-area h3 {
+        font-size: 1.2rem;
+    }
+    .score-board h3 {
+        font-size: 1.2rem;
+    }
+
+    .score-board p {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 1520px) {
+    #reset {
+        position: absolute;
+        top: 23px;
+        right: 5px;
+        font-size: 25px;
+    }
+    .logo {
+        position: absolute;
+        top: 15px;
+        left: -4px;
         height: 45px;
         width: 65px;
          
     }
-    
     .heading {
         text-align:center;
         font-size: 1.5rem;
@@ -351,10 +432,5 @@ body {
         padding: 2%;
        
     }
-    .game-area {
-        max-height: 750px;
-        
-    }
-
 }   
 
